@@ -1,3 +1,5 @@
+#!/usr/bin/mit-scheme
+
 (define (cubic x) (* x x x))
 
 (define (improve guess x)
