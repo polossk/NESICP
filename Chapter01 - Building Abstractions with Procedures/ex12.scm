@@ -1,5 +1,3 @@
-#!/usr/bin/mit-scheme
-
 (define (pascal levels)
     (define (binomial n k)
         (cond ((= n 0) 1)

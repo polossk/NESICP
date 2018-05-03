@@ -1,5 +1,3 @@
-#!/usr/bin/mit-scheme
-
 (define (square x) (* x x))
 ; CAUTION: may be overflow
 (define (sum-without-min a b c)

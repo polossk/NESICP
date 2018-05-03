@@ -1,5 +1,3 @@
-#!/usr/bin/mit-scheme
-
 (define (f x)
     (if (< x 3)
         x

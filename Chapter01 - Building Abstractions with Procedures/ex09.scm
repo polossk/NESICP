@@ -1,5 +1,3 @@
-#!/usr/bin/mit-scheme
-
 (define (+ a b)
     (if (= a 0)
         b
