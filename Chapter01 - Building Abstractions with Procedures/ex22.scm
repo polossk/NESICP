@@ -4,21 +4,21 @@
     (start-prime-test n (runtime)))
 
 (define (start-prime-test n start-time)
-    (if (prime? n) (report-prime n (- (runtime) start-time)) 0))
+    (if (prime? n) (report-prime n (- (runtime) start-time)) #f))
 
 (define (report-prime n elapsed-time)
     (newline)
     (display n)
     (display " *** ")
     (display elapsed-time)
-    1
+    #t
 )
 
 (define (search-for-primes a b cnt)
     (cond ((or (>= a b) (>= cnt 10)) (display "\ndone\n"))
           ((even? a) (search-for-primes (+ a 1) b cnt))
           (else (let ((flag (timed-prime-test a)))
-                (search-for-primes (+ a 2) b (if (= flag 1) (+ 1 cnt) cnt))))))
+                (search-for-primes (+ a 2) b (if flag (+ 1 cnt) cnt))))))
 
 (search-for-primes 1e9 1e10 0)
 ; 1000000007. *** .09000000000000001
